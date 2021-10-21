@@ -6,11 +6,11 @@ import {Component  } from "@angular/core";
     template: `
         <h1>{{titulo}}</h1>
         
-        <h3>La base es: <strong>{{abase}}</strong></h3>
+        <h3>La base es: <strong>{{base}}</strong></h3>
 
-        <button (click)="acumular(abase);"> + {{abase}}</button>
+        <button (click)="acumular(base);"> + {{base}}</button>
         <span>{{numero}}</span>
-        <button (click)="acumular(-abase);"> - {{abase}}</button>
+        <button (click)="acumular(-base);"> - {{base}}</button>
     `
 })
 
@@ -18,7 +18,7 @@ export class ContadorComponent{
 
   titulo: string = 'Contador App';
   numero: number = 10;
-  abase: number = 5;
+  base: number = 5;
 
   acumular (valor: number){
     this.numero += valor;
